@@ -34,5 +34,3 @@ return {
     keymap.set("n", "<leader>fc", "<Cmd>Telescope grep_string<CR>", {desc = "Find string under cursor in cwd"})
   end
 }
-
-  
