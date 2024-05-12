@@ -1,7 +1,16 @@
 return {
-   "ellisonleao/gruvbox.nvim",
-    priority = 1000, -- makes sure this is loaded first
-    config = function()
-        vim.cmd("colorscheme gruvbox")
-    end
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000, -- Makes sure this is loaded first
+  config = function()
+    require("gruvbox").setup({
+      italic = {
+        strings = false,
+        emphasis = false,
+        comments = false,
+        operators = false,
+        folds = false
+      }
+    })
+    vim.cmd("colorscheme gruvbox")
+  end
 }
