@@ -4,6 +4,7 @@ local opt = vim.opt
 local o = vim.o
 
 opt.number = true -- enables line number
+opt.relativenumber = true
 
 -- tabs and indentation
 opt.tabstop = 4 -- spaces for tabs

@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
@@ -33,7 +34,8 @@ return {
         "lua",
         "html",
         "css",
-        "javascript"
+        "javascript",
+        "vimdoc"
       },
 
       incremental_selection = {
