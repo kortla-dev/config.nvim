@@ -2,10 +2,11 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-    {"antosha417/nvim-lsp-file-operations", config = true},
-    {"folke/neodev.nvim", opts = {}}
+    { "antosha417/nvim-lsp-file-operations", config = true },
+    { "folke/neodev.nvim", opts = {} },
+    { "simrat39/rust-tools.nvim", config = true },
   },
-  event = {"BufReadPre", "BufNewFile"},
+  event = { "BufReadPre", "BufNewFile" },
 
   config = function()
     local lspconfig = require("lspconfig")
@@ -19,7 +20,7 @@ return {
       callback = function(ev)
         -- Buffer local mappings
         -- See ':help vim.lsp.*' for documentation on any of the below functions
-        local opts = {buffer = ev.buf, silent = true}
+        local opts = { buffer = ev.buf, silent = true }
 
         -- set keymaps
         opts.desc = "Show LSP references"
@@ -38,7 +39,7 @@ return {
         keymap.set("n", "gt", "<Cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
         opts.desc = "See available code actions"
-        keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
+        keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
 
         opts.desc = "Smart rename"
         keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
@@ -60,7 +61,7 @@ return {
 
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-      end
+      end,
     })
 
     -- used to enable autocompletion (assign to every lsp server config)
@@ -70,15 +71,19 @@ return {
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
       function(server_name)
         lspconfig[server_name].setup({
-          capabilities = capabilities
+          capabilities = capabilities,
         })
+      end,
+
+      ["rust_analyzer"] = function()
+        require("rust-tools").setup({})
       end,
 
       -- configuration for lua server
@@ -89,12 +94,12 @@ return {
             Lua = {
               -- make language server recognize "vim" global variable
               diagnostics = {
-                globals = {"vim"}
-              }
-            }
-          }
+                globals = { "vim" },
+              },
+            },
+          },
         })
-      end
+      end,
     })
-  end
+  end,
 }
