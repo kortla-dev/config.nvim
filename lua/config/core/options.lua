@@ -1,5 +1,7 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+vim.cmd("syntax off")
+
 local opt = vim.opt
 local o = vim.o
 
@@ -20,7 +22,7 @@ opt.smartcase = true -- if you include mixed case when searching, assumes you wa
 
 -- terminal color rendering
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be 
+opt.background = "dark" -- colorschemes that can be
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace

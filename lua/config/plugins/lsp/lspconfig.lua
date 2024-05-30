@@ -13,6 +13,14 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+    -- Hide semantic highlights for functions
+    vim.api.nvim_set_hl(0, "@lsp.type.function", {})
+
+    -- Hide all semantic highlights
+    for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+      vim.api.nvim_set_hl(0, group, {})
+    end
+
     local keymap = vim.keymap
 
     vim.api.nvim_create_autocmd("LspAttach", {
