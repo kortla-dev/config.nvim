@@ -3,7 +3,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
+    { "folke/lazydev.nvim", ft = "lua", opts = {} },
     { "simrat39/rust-tools.nvim", config = true },
   },
   event = { "BufReadPre", "BufNewFile" },
