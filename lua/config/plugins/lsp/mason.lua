@@ -2,7 +2,7 @@ return {
   "williamboman/mason.nvim",
   dependencies = {
     "williamboman/mason-lspconfig.nvim", -- helps install language servers used by mason.nvim
-    "WhoIsSethDaniel/mason-tool-installer.nvim" -- helps install formatters used by conform.nvim
+    "WhoIsSethDaniel/mason-tool-installer.nvim", -- helps install formatters used by conform.nvim
   },
 
   config = function()
@@ -30,7 +30,8 @@ return {
         "lua_ls", -- lua
         "html", -- html
         "cssls", -- css
-        "tsserver" -- javascript and typescript
+        "tsserver", -- javascript and typescript
+        "texlab",
       },
     })
 
@@ -42,7 +43,7 @@ return {
         "black", -- python
         "stylua", -- lua
         "prettier", -- a lot of web stuff like js, html, css, etc.
-      }
+      },
     })
-  end
+  end,
 }

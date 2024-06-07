@@ -37,6 +37,7 @@ return {
         "javascript",
         "json",
         "vimdoc",
+        "latex",
       },
 
       incremental_selection = {
