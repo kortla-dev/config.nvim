@@ -43,6 +43,7 @@ return {
         "black", -- python
         "stylua", -- lua
         "prettier", -- a lot of web stuff like js, html, css, etc.
+        "latexindent", -- latex
       },
     })
   end,

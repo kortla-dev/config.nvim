@@ -11,6 +11,7 @@ return {
         cs = { "csharpier" },
         python = { "isort", "black" },
         lua = { "stylua" },
+        tex = { "latexindent" },
         javascript = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
@@ -32,4 +33,6 @@ return {
       })
     end, { desc = "Format file or range (in visual mode)" })
   end,
+
+  opts = {},
 }
