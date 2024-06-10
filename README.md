@@ -3,7 +3,9 @@
 
 - [**Neovim**](https://neovim.io)
 - [**rustup**](https://www.rust-lang.org/tools/install): rust toolchain installer
-- **tree-sitter-cli**: can be installed with cargo or npm 
+- **tree-sitter-cli**: can be installed with cargo or npm
+- **Make**
+- **gcc** or **clang**
 - **dotnet**
 - **dotnet sdk**
 - [**Python**](https://www.python.org)
