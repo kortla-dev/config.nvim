@@ -2,7 +2,10 @@
 ## Requirements
 
 - [**Neovim**](https://neovim.io)
-- **tree-sitter-cli**: can be installed with cargo or npm 
+- [**rustup**](https://www.rust-lang.org/tools/install): rust toolchain installer
+- **tree-sitter-cli**: can be installed with cargo or npm
+- **Make**
+- **gcc** or **clang**
 - **dotnet**
 - **dotnet sdk**
 - [**Python**](https://www.python.org)
