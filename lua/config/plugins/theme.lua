@@ -25,6 +25,7 @@ return {
         ["@keyword.operator"] = { fg = "#FF6961" },
         ["@keyword.repeat"] = { fg = "#FF6961" },
         ["@keyword.return"] = { fg = "#FF6961" },
+        ["@label"] = { fg = "#fabd2f" },
         ["@module"] = { fg = "#ecd0a0" },
         ["@operator"] = { fg = "#FF964F" },
         ["@punctuation.bracket"] = { fg = "#A89984" },
