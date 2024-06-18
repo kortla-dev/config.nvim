@@ -91,7 +91,22 @@ return {
       end,
 
       ["rust_analyzer"] = function()
-        require("rust-tools").setup({})
+        require("rust-tools").setup({
+          settings = {
+            ["rust_analyzer"] = {
+              cargo = {
+                allFeatures = true,
+                loadOutDirsFromCheck = true,
+                runBuildScripts = true,
+              },
+              -- Add clippy lints for Rust.
+              check = {
+                allFeatures = true,
+                command = "clippy",
+              },
+            },
+          },
+        })
       end,
 
       -- configuration for lua server

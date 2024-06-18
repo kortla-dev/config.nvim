@@ -22,6 +22,7 @@ return {
         ["@keyword.conditional"] = { fg = "#fabd2f" },
         ["@keyword.function"] = { fg = "#FF6961" },
         ["@keyword.modifier"] = { fg = "#FF6961" },
+        ["@keyword.operator"] = { fg = "#FF6961" },
         ["@keyword.repeat"] = { fg = "#FF6961" },
         ["@keyword.return"] = { fg = "#FF6961" },
         ["@module"] = { fg = "#ecd0a0" },
