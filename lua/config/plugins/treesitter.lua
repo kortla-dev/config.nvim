@@ -38,6 +38,7 @@ return {
         "json",
         "vimdoc",
         "latex",
+        "toml",
       },
 
       incremental_selection = {

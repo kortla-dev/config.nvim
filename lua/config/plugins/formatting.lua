@@ -12,6 +12,7 @@ return {
         python = { "isort", "black" },
         lua = { "stylua" },
         tex = { "latexindent" },
+        toml = { "taplo" },
         javascript = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
