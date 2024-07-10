@@ -44,7 +44,7 @@ return {
         "stylua", -- lua
         "prettier", -- a lot of web stuff like js, html, css, etc.
         "latexindent", -- latex
-        "taplo",
+        "taplo", -- toml
       },
     })
   end,
