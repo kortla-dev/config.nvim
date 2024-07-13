@@ -15,7 +15,11 @@ require("lazy").setup(
   -- plugins
   {
     { import = "config.plugins" },
-    { import = "config.plugins.lsp" },
+    { import = "config.plugins.ide_config" },
+    {import = "config.plugins.ide_config.LSP"},
+    -- {import = "config.plugins.ide_config.DAP"},
+    {import = "config.plugins.ide_config.Lint"},
+    {import = "config.plugins.ide_config.Formatter"},
   },
   -- lazy.nvim options
   {
