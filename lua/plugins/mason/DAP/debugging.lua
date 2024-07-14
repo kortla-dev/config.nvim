@@ -7,7 +7,7 @@ return {
 
   config = function()
     local dap = require("dap")
-    local dapui = require("nvim-dap-ui")
+    local dapui = require("dapui")
 
     dapui.setup()
 
