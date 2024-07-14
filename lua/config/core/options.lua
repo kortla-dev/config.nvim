@@ -1,7 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
-vim.cmd("syntax off")
-
 local opt = vim.opt
 local o = vim.o
 
@@ -14,7 +12,7 @@ opt.shiftwidth = 4 -- spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- will follow indentation level from previous line
 
-opt.wrap = false
+opt.wrap = false -- word wraping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching

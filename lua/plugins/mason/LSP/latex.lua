@@ -2,7 +2,6 @@ return {
   "lervag/vimtex",
   lazy = false,
   init = function()
-    -- vim.g.vimtex_view_method = "mupdf"
     -- this doesnt want to work so just put the comment at the top of you main.tex
     -- vim.g.vimtex_compiler_engine = "xelatex" -- %! TEX TS-program = xelatex
 

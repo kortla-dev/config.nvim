@@ -3,6 +3,7 @@ return {
   keys = {
     { "<leader>ht", "<Cmd>HighlightColors Toggle<CR>", desc = "Toggle colour highlighting" },
   },
+
   config = function()
     local highlight = require("nvim-highlight-colors")
 

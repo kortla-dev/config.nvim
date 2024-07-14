@@ -9,7 +9,10 @@ return {
       formatters_by_ft = {
         rust = { "rustfmt" },
         cs = { "csharpier" },
-        python = { "isort", "black" },
+        python = {
+          { command = "isort", args = { "--line-ending", "auto" } },
+          "black",
+        },
         lua = { "stylua" },
         tex = { "latexindent" },
         toml = { "taplo" },
@@ -34,6 +37,4 @@ return {
       })
     end, { desc = "Format file or range (in visual mode)" })
   end,
-
-  opts = {},
 }

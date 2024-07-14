@@ -10,7 +10,7 @@ return {
 
     lualine.setup({
       sections = {
-        -- x is the section of the statusline check sections in :h lualine 
+        -- x is the section of the statusline check sections in :h lualine
         lualine_x = {{
             lazy_status.updates,
             cond = lazy_status.has_updates,

@@ -4,7 +4,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/lazydev.nvim", ft = "lua", opts = {} },
-    { "simrat39/rust-tools.nvim", config = true }, -- TODO: move to rustaceanim
+    { "simrat39/rust-tools.nvim", config = true }, -- NOTE: Consider moving to rustaceanvim
   },
   event = { "BufReadPre", "BufNewFile" },
 
@@ -13,8 +13,8 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    -- Hide semantic highlights for functions
-    vim.api.nvim_set_hl(0, "@lsp.type.function", {})
+    -- -- Hide semantic highlights for functions
+    -- vim.api.nvim_set_hl(0, "@lsp.type.function", {})
 
     -- Hide all semantic highlights
     for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
@@ -91,22 +91,7 @@ return {
       end,
 
       ["rust_analyzer"] = function()
-        require("rust-tools").setup({
-          settings = {
-            ["rust_analyzer"] = {
-              cargo = {
-                allFeatures = true,
-                loadOutDirsFromCheck = true,
-                runBuildScripts = true,
-              },
-              -- Add clippy lints for Rust.
-              check = {
-                allFeatures = true,
-                command = "clippy",
-              },
-            },
-          },
-        })
+        require("rust-tools").setup({})
       end,
 
       -- configuration for lua server
