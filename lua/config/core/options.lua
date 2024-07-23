@@ -1,36 +1,33 @@
-vim.cmd("let g:netrw_liststyle = 3")
+local options = {
+  autoindent = true, -- copy indent from current line when starting a new line
+  background = "dark", -- colorschemes that can be used with dark background
+  backspace = "indent,eol,start", -- allow backspace on indent, end of line or insert mode start position
+  clipboard = "unnamedplus", -- neovim will use system clipboard
+  copyindent = true, -- copy the previous indentation on autoindenting
+  cursorline = true, -- highlight line cursor is on
+  expandtab = true, -- convert tabs to spaces
+  ignorecase = true, -- ignore case when searching
+  number = true, -- show line number
+  relativenumber = true, -- show relative line number
+  signcolumn = "yes", -- always show the sign column
+  smartcase = true, -- if you include mixed case when searching, assumes you want case-sensitive
+  splitbelow = true, -- vertical split moves new window to the right
+  splitright = true, -- horizontal split moves new window to the bottom
+  termguicolors = true, -- enable 24-bit RGB color in the TUI
+  title = true, -- set terminal title to filename and path
+  wrap = false  -- line wrapping
+}
 
-vim.cmd("syntax off")
+local globals = {
+  netrw_liststyle = 3,
+}
 
-local opt = vim.opt
-local o = vim.o
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
 
-opt.number = true -- enables line number
-opt.relativenumber = true
+for k, v in pairs(globals) do
+  vim.g[k] = v
+end
 
--- tabs and indentation
-opt.tabstop = 4 -- spaces for tabs
-opt.shiftwidth = 4 -- spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- will follow indentation level from previous line
 
-opt.wrap = false
-
--- search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case when searching, assumes you want case-sensitive
-
--- terminal color rendering
-opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
-
--- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
-
--- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
-
--- split windows
-opt.splitright = true -- vertical split moves new window to the right
-opt.splitbelow = true -- horizontal split moves new window to the bottom
