@@ -1,3 +1,5 @@
+-- vim.cmd("syntax off")
+
 local options = {
   autoindent = true, -- copy indent from current line when starting a new line
   background = "dark", -- colorschemes that can be used with dark background
@@ -15,19 +17,20 @@ local options = {
   splitright = true, -- horizontal split moves new window to the bottom
   termguicolors = true, -- enable 24-bit RGB color in the TUI
   title = true, -- set terminal title to filename and path
-  wrap = false  -- line wrapping
+  wrap = false, -- line wrapping
 }
 
 local globals = {
-  netrw_liststyle = 3,
+  loaded_netrw = 1,
+  loaded_netrwPlugin = 1,
 }
 
+-- options
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+-- globals
 for k, v in pairs(globals) do
   vim.g[k] = v
 end
-
-
