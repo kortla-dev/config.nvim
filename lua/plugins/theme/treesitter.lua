@@ -8,7 +8,7 @@ M.config = function()
   local treesitter = require("nvim-treesitter.configs")
 
   treesitter.setup({
-    ensure_installed = { "lua", "python", "rust", "vimdoc" },
+    ensure_installed = { "lua", "python", "rust", "vimdoc", "fennel" },
     highlight = { enable = true },
     indent = { enable = true },
   })
