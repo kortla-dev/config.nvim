@@ -7,7 +7,7 @@ M.opts = {
   formatters_by_ft = {
     lua = { "stylua" },
     python = { "black" },
-    rust = { "rustfmt" }
+    rust = { "rustfmt" },
   },
   format_on_save = {
     lsp_format = "fallback",
