@@ -8,11 +8,15 @@ M.opts = {
     lua = { "stylua" },
     python = { "black" },
     rust = { "rustfmt" },
+    cs = { "csharpier" },
+    html = { "prettier" },
+    css = { "prettier" },
+    javascript = { "prettier" },
   },
   format_on_save = {
     lsp_format = "fallback",
     async = false,
-    timeout_ms = 1000,
+    timeout_ms = 1500,
   },
 }
 

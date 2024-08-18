@@ -26,6 +26,7 @@ M.config = function()
     ensure_installed = {
       "lua_ls", -- lua
       "pyright", -- python
+      "html",
     },
   })
 
@@ -34,6 +35,8 @@ M.config = function()
       -- Formatters
       "stylua", -- lua
       "black", -- python
+      "csharpier", -- c#
+      "prettier", -- web stuff
 
       -- Linters
       "pylint", -- python

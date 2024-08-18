@@ -4,24 +4,31 @@ local M = {
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
     "onsails/lspkind.nvim",
+    { "L3MON4D3/LuaSnip", version = "v2.*" },
+    "saadparwaiz1/cmp_luasnip", -- for LuaSnip autocompletion
+    "rafamadriz/friendly-snippets", -- useful snippets
   },
   event = { "InsertEnter" },
 }
 
 M.config = function()
   local nvim_cmp = require("cmp")
+  local luasnip = require("luasnip")
   local lspkind = require("lspkind")
 
   -- keymaps
   local keymaps = {
-    ["<C-k>"] = nvim_cmp.mapping.select_prev_item(), --previous suggestion
-    ["<C-j>"] = nvim_cmp.mapping.select_next_item(), -- next suggestion
+    ["<C-p>"] = nvim_cmp.mapping.select_prev_item(), --previous suggestion
+    ["<C-n>"] = nvim_cmp.mapping.select_next_item(), -- next suggestion
     ["<C-b>"] = nvim_cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = nvim_cmp.mapping.scroll_docs(4),
     ["<C-o>"] = nvim_cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = nvim_cmp.mapping.abort(), -- close completion window
-    ["<CR>"] = nvim_cmp.mapping.confirm({ select = true }),
+    ["<C-y>"] = nvim_cmp.mapping.confirm({ select = true }),
   }
+
+  -- loads vscode style snippets from installed plugins (eg. friendly-snippets)
+  require("luasnip.loaders.from_vscode").lazy_load()
 
   -- autocompletion for in files
   nvim_cmp.setup({
@@ -31,6 +38,7 @@ M.config = function()
       { name = "nvim_lsp" },
       { name = "path" },
       { name = "buffer" },
+      { name = "luasnip" },
     }),
 
     window = {
@@ -70,6 +78,12 @@ M.config = function()
     completion = {
       -- https://neovim.io/doc/user/options.html#'completeopt'
       completeopt = "menu,menuone,noinsert",
+    },
+
+    snippet = {
+      expand = function(args)
+        luasnip.lsp_expand(args.body)
+      end,
     },
 
     mapping = nvim_cmp.mapping(keymaps, { "i" }),

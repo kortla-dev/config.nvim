@@ -21,11 +21,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "plugins" },
+    -- { import = "plugins" },
     { import = "plugins/theme" },
     { import = "plugins/ui" },
     { import = "plugins/IDE" },
     { import = "plugins/IDE/LSP" },
+    { import = "plugins/IDE/DAP" },
     { import = "plugins/IDE/formatting" },
     { import = "plugins/IDE/linting" },
     { import = "plugins/navigation" },

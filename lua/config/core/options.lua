@@ -18,6 +18,8 @@ local options = {
   termguicolors = true, -- enable 24-bit RGB color in the TUI
   title = true, -- set terminal title to filename and path
   wrap = false, -- line wrapping
+  shiftwidth = 4,
+  tabstop = 4,
 }
 
 local globals = {
