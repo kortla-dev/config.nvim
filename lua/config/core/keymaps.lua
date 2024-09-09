@@ -21,3 +21,17 @@ keymap.set("n", "<leader>tx", "<Cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tl", "<Cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>th", "<Cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<Cmd>tabnew %<CR>", { desc = "Open current buffer in a new tab" })
+
+-- macro repeat
+keymap.set("n", ",", "@@", { desc = "Repeat the last executed macro" })
+
+-- Set terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+local os_type = vim.loop.os_uname().sysname
+
+if os_type == "Windows_NT" then
+  keymap.set("n", "<leader>tt", "<cmd>terminal powershell<cr>")
+else
+  keymap.set("n", "<leader>tt", "<cmd>terminal zsh<cr>")
+end

@@ -25,8 +25,11 @@ require("lazy").setup({
     { import = "plugins/theme" },
     { import = "plugins/ui" },
     { import = "plugins/IDE" },
-    { import = "plugins/IDE/LSP" },
     { import = "plugins/IDE/DAP" },
+
+    { import = "plugins/IDE/LSP" },
+    { import = "plugins/IDE/LSP/lang/after" },
+
     { import = "plugins/IDE/formatting" },
     { import = "plugins/IDE/linting" },
     { import = "plugins/navigation" },

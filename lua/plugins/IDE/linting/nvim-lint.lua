@@ -8,11 +8,13 @@ M.config = function()
 
   nvim_lint.linters_by_ft = {
     python = { "pylint" },
+    c = { "cpplint" },
+    cpp = { "cpplint" },
   }
 
   vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost" }, {
     group = vim.api.nvim_create_augroup("Lint", { clear = true }),
-    pattern = { "*.py" },
+    pattern = { "*.py", "*.c", "*.cpp" },
     callback = function()
       nvim_lint.try_lint()
     end,

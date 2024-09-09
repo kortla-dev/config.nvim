@@ -11,7 +11,7 @@ M.config = function()
   local mason_lspconfig = require("mason-lspconfig")
 
   vim.api.nvim_create_autocmd("LspAttach", {
-    -- group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
     callback = function(ev)
       local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
@@ -57,6 +57,24 @@ M.config = function()
       vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
     end,
   })
+
+  -- vim.api.nvim_create_autocmd("BufLeave", {
+  --   group = vim.api.nvim_create_augroup("LspConfigBufLeaveCleanUp", {}),
+  --   callback = function(args)
+  --     if args.data == nil then
+  --       return
+  --     end
+  --
+  --     local client = vim.api.get_client_by_id(args.data.client_id)
+  --
+  --     if client == nil then
+  --       print("client is nil")
+  --       return
+  --     end
+  --
+  --     vim.lsp.buf_detach_client(args.buf, client.id)
+  --   end,
+  -- })
 
   -- lets LSP interact wiht nvim-cmp
   local capabilities = require("cmp_nvim_lsp").default_capabilities()

@@ -15,7 +15,6 @@ local options = {
   smartcase = true, -- if you include mixed case when searching, assumes you want case-sensitive
   splitbelow = true, -- vertical split moves new window to the right
   splitright = true, -- horizontal split moves new window to the bottom
-  termguicolors = true, -- enable 24-bit RGB color in the TUI
   title = true, -- set terminal title to filename and path
   wrap = false, -- line wrapping
   shiftwidth = 4,
@@ -25,6 +24,8 @@ local options = {
 local globals = {
   loaded_netrw = 1,
   loaded_netrwPlugin = 1,
+  editorconfig = true,
+  termguicolors = true, -- enable 24-bit RGB color in the TUI
 }
 
 -- options

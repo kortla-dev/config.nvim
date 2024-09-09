@@ -7,7 +7,8 @@ local M = {
 }
 
 M.config = function()
-  require("oil").setup({
+  local oil = require("oil")
+  oil.setup({
     default_file_explorer = true,
     view_options = {
       show_hidden = true,
@@ -24,6 +25,10 @@ M.config = function()
   })
 
   vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+  vim.keymap.set("n", "!", function()
+    -- vim.fs.joinpath(
+    oil.open(vim.fn.stdpath("config"))
+  end, { desc = "Open config directory" })
 end
 
 return M
