@@ -22,6 +22,7 @@ keymap.set("n", "<leader>tl", "<Cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>th", "<Cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<Cmd>tabnew %<CR>", { desc = "Open current buffer in a new tab" })
 
+-- NOTE: local map leader is also ','
 -- macro repeat
 keymap.set("n", ",", "@@", { desc = "Repeat the last executed macro" })
 

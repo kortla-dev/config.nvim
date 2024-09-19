@@ -15,7 +15,7 @@ M.config = function()
 
   telescope.setup({
     defaults = {
-      prompt_prefix = " -> ", -- TODO: find something better
+      prompt_prefix = " :~$ ", -- TODO: find something better
       sorting_strategy = "ascending",
       path_display = { "truncate" },
       initial_mode = "insert",
@@ -48,6 +48,7 @@ M.config = function()
 
   local keymap = vim.keymap
 
+  keymap.set("n", "<leader>f", "", { desc = "Telescope bindings" })
   keymap.set("n", "<leader>ff", "<Cmd>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
   keymap.set("n", "<leader>fr", "<Cmd>Telescope oldfiles<CR>", { desc = "Fuzzy find recent files" })
   keymap.set("n", "<leader>fs", "<Cmd>Telescope live_grep<CR>", { desc = "Find string in cwd" })
