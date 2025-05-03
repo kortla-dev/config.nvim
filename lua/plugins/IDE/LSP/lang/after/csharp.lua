@@ -23,10 +23,6 @@ M.config = function()
         },
       },
     },
-    exe = {
-      "dotnet",
-      vim.fs.joinpath(vim.fn.stdpath("data"), "roslyn", "Microsoft.CodeAnalysis.LanguageServer.dll"),
-    },
 
     -- NOTE: Set `filewatching` to false if you experience performance problems.
     -- Defaults to true, since turning it off is a hack.

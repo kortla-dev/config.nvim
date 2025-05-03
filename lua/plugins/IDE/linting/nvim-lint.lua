@@ -7,7 +7,7 @@ M.config = function()
   local nvim_lint = require("lint")
 
   nvim_lint.linters_by_ft = {
-    python = { "pylint" },
+    -- python = { "pylint" },
     c = { "cpplint" },
     cpp = { "cpplint" },
   }

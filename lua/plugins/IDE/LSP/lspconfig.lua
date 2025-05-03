@@ -50,6 +50,7 @@ M.config = function()
 
     -- we clear rust_analyzer setup to avoid conflict with rustaceanvim
     ["rust_analyzer"] = function() end,
+    -- ["pyright"] = function() end,
 
     -- configuration for lua server
     ["lua_ls"] = function()
