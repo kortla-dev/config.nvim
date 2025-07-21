@@ -22,7 +22,11 @@ require("lazy").setup({
         { import = "kortla.plugins.ui" },
         { import = "kortla.plugins.text" },
         { import = "kortla.plugins.navigation" },
+        { import = "kortla.plugins.IDE"},
     },
+
+    install = { colorscheme = { "pastelbox" } },
+
     checker = {
         enabled = true,
         notify = false,
