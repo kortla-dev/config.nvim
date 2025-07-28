@@ -22,7 +22,9 @@ require("lazy").setup({
         { import = "kortla.plugins.ui" },
         { import = "kortla.plugins.text" },
         { import = "kortla.plugins.navigation" },
+
         { import = "kortla.plugins.IDE"},
+        { import = "kortla.plugins.IDE.LSP"},
     },
 
     install = { colorscheme = { "pastelbox" } },
