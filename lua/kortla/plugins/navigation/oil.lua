@@ -1,20 +1,25 @@
 local M = {
-    "stevearc/oil.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+  "stevearc/oil.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
 }
 
 M.config = function()
-    local oil = require("oil")
+  local oil = require("oil")
 
-    oil.setup({
-        default_file_explorer = true,
-        view_options = {
-            show_hidden = true,
-        },
-        delete_to_trash = true,
-    })
+  oil.setup({
+    default_file_explorer = true,
+    view_options = {
+      show_hidden = true,
+    },
+    delete_to_trash = true,
 
-    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+    keymaps = {
+      ["<C-h>"] = {},
+      ["<C-l>"] = {},
+    },
+  })
+
+  vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 end
 
 return M

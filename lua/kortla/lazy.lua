@@ -16,24 +16,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = {
-        { import = "kortla.plugins" },
-        { import = "kortla.plugins.theme" },
-        { import = "kortla.plugins.ui" },
-        { import = "kortla.plugins.text" },
-        { import = "kortla.plugins.navigation" },
+  spec = {
+    { import = "kortla.plugins" },
+    { import = "kortla.plugins.theme" },
+    { import = "kortla.plugins.ui" },
+    { import = "kortla.plugins.text" },
+    { import = "kortla.plugins.navigation" },
 
-        { import = "kortla.plugins.IDE"},
-        { import = "kortla.plugins.IDE.LSP"},
-    },
+    { import = "kortla.plugins.IDE" },
+    { import = "kortla.plugins.IDE.LSP" },
+    { import = "kortla.plugins.IDE.formatting" },
+  },
 
-    install = { colorscheme = { "pastelbox" } },
+  install = { colorscheme = { "pastelbox" } },
 
-    checker = {
-        enabled = true,
-        notify = false,
-    },
-    change_detection = {
-        notify = false,
-    }
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
 })

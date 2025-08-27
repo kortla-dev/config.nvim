@@ -28,7 +28,7 @@ opt.scrolloff = 8
 opt.signcolumn = "yes"
 opt.cursorline = true
 
-opt.backspace = {"start", "eol", "indent"}
+opt.backspace = { "start", "eol", "indent" }
 
 opt.splitright = true
 opt.splitbelow = true

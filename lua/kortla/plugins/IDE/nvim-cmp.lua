@@ -6,13 +6,12 @@ local M = {
     "nvim-treesitter/nvim-treesitter",
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
-  event = {"InsertEnter"},
+  event = { "InsertEnter" },
 }
 
 M.config = function()
   local nvim_cmp = require("cmp")
   local lspkind = require("lspkind")
-
 
   local keymaps = {
     ["<C-p>"] = nvim_cmp.mapping.select_prev_item(), --previous suggestion
