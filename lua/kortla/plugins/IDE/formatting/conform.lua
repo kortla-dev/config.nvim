@@ -52,6 +52,7 @@ M.opts = {
     json = { "prettier" },
     php = { "pint" },
     blade = { "blade-formatter" },
+    nix = { "nixfmt" },
   },
 }
 

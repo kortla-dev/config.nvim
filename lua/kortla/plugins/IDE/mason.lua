@@ -26,7 +26,7 @@ M.config = function()
 
   mason_lspconfig.setup({
     ensure_installed = {
-      "lua_ls", -- lua
+      -- "lua_ls", -- lua
     },
 
     automatic_installation = true,
@@ -35,8 +35,8 @@ M.config = function()
   mason_tool_installer.setup({
     ensure_installed = {
       -- Formatters
-      "stylua", -- lua
-      "prettier", -- web stuff
+      -- "stylua", -- lua
+      -- "prettier", -- web stuff
 
       -- Linters
     },

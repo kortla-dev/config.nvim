@@ -99,6 +99,9 @@ M.config = function()
     ["stimulis_language_server"] = {
       filetypes = { "blade" },
     },
+    ["zls"] = {
+      filetypes = { "zig", "zon"},
+    },
   }
 
   for server, cfg in pairs(servers) do
