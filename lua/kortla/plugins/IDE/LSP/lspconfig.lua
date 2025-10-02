@@ -28,17 +28,17 @@ M.config = function()
 
       -- set keymaps
       keymap("n", "<localleader>gd", telescope.lsp_definitions, "[g]oto [d]efinition")
-      keymap("n", "<localleader>gt", telescope.lsp_type_definitions, "Show LSP type definitions") -- show lsp type definitions
+      keymap("n", "<localleader>gt", telescope.lsp_type_definitions, "Show LSP type definitions")        -- show lsp type definitions
       keymap({ "n", "v" }, "<localleader>ca", vim.lsp.buf.code_action, "See available [c]ode [a]ctions") -- see available code actions
-      keymap("n", "<localleader>rn", vim.lsp.buf.rename, "[s]mart [r]ename") -- smart rename
+      keymap("n", "<localleader>rn", vim.lsp.buf.rename, "[s]mart [r]ename")                             -- smart rename
       keymap("n", "<localleader>sd", function()
         telescope.diagnostics({ buffer = ev.buf })
-      end, "[s]how buffer [d]iagnostics") -- show diagnostics
-      keymap("n", "<leader>d", vim.diagnostic.open_float, "Show line diagnostics") -- show diagnostics for line
-      keymap("n", "<localleader>pd", vim.diagnostic.get_prev, "Go to [p]revious [d]iagnostics") -- jump to previous diagnostic in buffer
-      keymap("n", "<localleader>nd", vim.diagnostic.get_next, "Go to [n]ext [d]iagnostic") -- jump to next diagnostic in buffer
+      end, "[s]how buffer [d]iagnostics")                                                             -- show diagnostics
+      keymap("n", "<leader>d", vim.diagnostic.open_float, "Show line diagnostics")                    -- show diagnostics for line
+      keymap("n", "<localleader>pd", vim.diagnostic.get_prev, "Go to [p]revious [d]iagnostics")       -- jump to previous diagnostic in buffer
+      keymap("n", "<localleader>nd", vim.diagnostic.get_next, "Go to [n]ext [d]iagnostic")            -- jump to next diagnostic in buffer
       keymap("n", "<localleader>K", vim.lsp.buf.hover, "Show documentation for what is under cursor") -- show documentation for what is under cursor
-      keymap("n", "<localleader>rs", ":LspRestart<CR>", "[r]estart [l]SP") -- mapping to restart lsp if necessary
+      keymap("n", "<localleader>rs", ":LspRestart<CR>", "[r]estart [l]SP")                            -- mapping to restart lsp if necessary
     end,
   })
 
@@ -100,7 +100,10 @@ M.config = function()
       filetypes = { "blade" },
     },
     ["zls"] = {
-      filetypes = { "zig", "zon"},
+      filetypes = { "zig", "zon" },
+    },
+    ["clangd"] = {
+      filetypes = { "c", "h" },
     },
   }
 
