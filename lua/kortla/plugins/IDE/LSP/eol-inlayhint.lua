@@ -1,10 +1,10 @@
 local M = {
   "chrisgrieser/nvim-lsp-endhints",
-  enabled = false,
+  enabled = true,
   event = "LspAttach",
   opts = {
     label = {
-      truncateAtChars = 40,
+      truncateAtChars = 50,
     },
   },
 }

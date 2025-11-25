@@ -38,5 +38,7 @@ opt.updatetime = 50
 opt.clipboard:append("unnamedplus")
 opt.hlsearch = true
 
+opt.winborder = "rounded"
+
 opt.mouse = "a"
 vim.g.editorconfig = true
