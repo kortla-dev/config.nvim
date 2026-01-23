@@ -6,5 +6,5 @@ capabilities = vim.tbl_deep_extend("force", capabilities, cnl_capabilities)
 local LSP = "clangd"
 
 vim.lsp.config(LSP, capabilities)
-vim.lsp.config(LSP, { cmd = { "clangd", "--compile-commands-dir=.clangd" } })
+vim.lsp.config(LSP, { cmd = { "clangd", "--compile-commands-dir=." } })
 vim.lsp.enable(LSP)
