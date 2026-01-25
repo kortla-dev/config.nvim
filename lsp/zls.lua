@@ -1,5 +1,4 @@
 local zls = {
-
     filetypes = { "zig", "zon" },
     settings = {
         zls = {
